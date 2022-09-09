@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .product-details {
+            width: 100%;
+            padding: 60px 10vw;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .image-slider {
+            width: 500px;
+            height: 500px;
+            position: relative;
+            background-image: url('../mobimg/sam1.webp');
+            background-size: cover;
+        }
+
+        .product-images {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            background: #fff;
+            border-radius: 5px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            height: 100px;
+            grid-gap: 10px;
+            padding: 10px;
+        }
+
+        .product-images img {
+            width: 100%;
+            height: 80px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .product-images img.active {
+            opacity: 0.5;
+        }
+
+
+
+
+
+
+        .details {
+            width: 50%;
+
+        }
+
+        .details .product-brand {
+            text-transform: capitalize;
+            font-size: 30px;
+        }
+
+        .details .product-short-des {
+            font-size: 25px;
+            line-height: 30px;
+            height: auto;
+            margin: 15px 0 30px;
+        }
+
+        .product-price {
+            font-weight: 700;
+            font-size: 30px;
+        }
+
+        .product-actual-price {
+            font-size: 30px;
+            opacity: 0.5;
+            text-decoration: line-through;
+            margin: 0 20px;
+            font-weight: 300;
+        }
+
+        .product-discount {
+            color: #ff7d7d;
+            font-size: 20px;
+        }
+
+        .product-sub-heading {
+            font-size: 30px;
+            text-transform: uppercase;
+            margin: 60px 0 10px;
+            font-weight: 300;
+        }
+
+        .size-radio-btn {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            text-align: center;
+            font-size: 20px;
+            border: 1px solid #383838;
+            border-radius: 50%;
+            margin: 10px;
+            margin-left: 0;
+            line-height: 80px;
+            text-transform: uppercase;
+            color: #383838;
+            cursor: pointer;
+        }
+
+        .size-radio-btn.check {
+            background: #383838;
+            color: #fff;
+        }
+
+        .btn {
+            width: 48%;
+            padding: 20px;
+            border-radius: 5px;
+            background: none;
+            border: 1px solid #383838;
+            color: #383838;
+            font-size: 20px;
+            cursor: pointer;
+            margin: 20px 0;
+            text-transform: capitalize;
+        }
+
+        .cart-btn {
+            margin-right: 2%;
+            background: #383838;
+            color: #fff;
+        }
+
+
+
+
+
+
+
+
+
+
+        .detail-des {
+            padding: 0 10vw;
+            text-transform: capitalize;
+        }
+
+        .heading {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .des {
+            color: #383838;
+            line-height: 25px;
+        }
+    </style>
+    <link rel="stylesheet" href="css/home.css">
+    <!-- <link rel="stylesheet" href="css/product.css"> -->
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav">
+            <img src="img/dark-logo.png" class="brand-logo" alt="">
+            <div class="nav-items">
+                <div class="search">
+                    <input type="text" class="search-box" placeholder="search brand, product">
+                    <button class="search-btn">search</button>
+                </div>
+                <a href="#"><img src="img/user.png" alt=""></a>
+                <a href="#"><img src="img/cart.png" alt=""></a>
+            </div>
+        </div>
+    </nav>
+    <ul class="links-container">
+        <!-- <li class="link-item"><a href="#" class="link">home</a></li>
+            <li class="link-item"><a href="#" class="link">women</a></li>
+            <li class="link-item"><a href="#" class="link">men</a></li>
+            <li class="link-item"><a href="#" class="link">kids</a></li>
+            <li class="link-item"><a href="#" class="link">accessories</a></li> -->
+    </ul>
+
+    <section class="product-details">
+        <div class="image-slider">
+            <div class="product-images">
+                <img src="mobimg/red1.webp" class="active" alt="">
+                <img src="mobimg/red2.webp" alt="">
+                <img src="mobimg/red3.webp" alt="">
+                <img src="mobimg/red4.webp" alt="">
+            </div>
+        </div>
+        <div class="details">
+            <h2 class="product-brand">Redmi note 10 </h2>
+            <p class="product-short-des">Redmi Note 10T 5G (Mint Green, 4GB RAM, 64GB Storage) | Dual5G | 90Hz Adaptive
+                Refresh Rate | MediaTek Dimensity 700 7nm Processor | 22.5W Charger Included
+                Brand: Redmi
+                4.2 out of 5 stars 127,798 ratings</p>
+            <span class="product-price">₹13,999.00</span>
+            <span class="product-actual-price"> ₹16,999.00 </span>
+            <span class="product-discount">( 18% off )</span>
+
+            <p class="product-sub-heading">select color</p>
+
+            <input type="radio" name="size" value="s" checked hidden id="s-size">
+            <label for="s-size" class="size-radio-btn check">black</label>
+            <input type="radio" name="size" value="m" hidden id="m-size">
+            <label for="m-size" class="size-radio-btn">Blue</label>
+            <input type="radio" name="size" value="l" hidden id="l-size">
+            <label for="l-size" class="size-radio-btn">gold</label>
+            <input type="radio" name="size" value="xl" hidden id="xl-size">
+            <label for="xl-size" class="size-radio-btn">silver</label>
+            <input type="radio" name="size" value="xxl" hidden id="xxl-size">
+            <label for="xxl-size" class="size-radio-btn">grey</label>
+            <a href="pay.html"><button class="btn cart-btn">Buy it </button></a>
+            <!-- <button class="btn cart-btn">add to cart </button> -->
+            <a href="cart.html"><button class="btn">add to cart</button></a>
+            <!-- <button class="btn">add to wishlist</button> -->
+        </div>
+    </section>
+
+
+
+
+
+    <section class="detail-des">
+        <h2 class="heading">description</h2>
+        <p class="des">About this item
+            6000mAh lithium-ion battery, 1 year manufacturer warranty for device and 6 months manufacturer warranty for
+            in-box accessories including batteries from the date of purchase
+            Upto 12GB RAM with RAM Plus | 64GB internal memory expandable up to 1TB| Dual Sim (Nano)
+            50MP+5MP+2MP Triple camera setup- True 50MP (F1.8) main camera +5MP(F2.2)+ 2MP (F2.4) | 8MP (F2.2) front cam
+            Android 12,One UI Core 4 with a powerful Octa Core Processor
+            16.72 centimeters (6.6-inch) FHD+ LCD - infinity O Display, FHD+ resolution with 1080 x 2408 pixels
+            resolution, 401 PPI with 16M color</p>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <img src="" class="logo" alt="">
+            <div class="footer-ul-container">
+                <ul class="category">
+                    <li class="category-title">men</li>
+                    <li><a href="#" class="footer-link">t-shirts</a></li>
+                    <li><a href="#" class="footer-link">sweatshirts</a></li>
+                    <li><a href="#" class="footer-link">shirts</a></li>
+                    <li><a href="#" class="footer-link">jeans</a></li>
+                    <li><a href="#" class="footer-link">trousers</a></li>
+                    <li><a href="#" class="footer-link">shoes</a></li>
+                    <li><a href="#" class="footer-link">casuals</a></li>
+                    <li><a href="#" class="footer-link">formals</a></li>
+                    <li><a href="#" class="footer-link">sports</a></li>
+                    <li><a href="#" class="footer-link">watch</a></li>
+                </ul>
+                <ul class="category">
+                    <li class="category-title">women</li>
+                    <li><a href="#" class="footer-link">t-shirts</a></li>
+                    <li><a href="#" class="footer-link">sweatshirts</a></li>
+                    <li><a href="#" class="footer-link">shirts</a></li>
+                    <li><a href="#" class="footer-link">jeans</a></li>
+                    <li><a href="#" class="footer-link">trousers</a></li>
+                    <li><a href="#" class="footer-link">shoes</a></li>
+                    <li><a href="#" class="footer-link">casuals</a></li>
+                    <li><a href="#" class="footer-link">formals</a></li>
+                    <li><a href="#" class="footer-link">sports</a></li>
+                    <li><a href="#" class="footer-link">watch</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/home.js"></script>
+    <script src="js/product.js"></script>
+</body>
+
+</html>
